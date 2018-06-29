@@ -28,10 +28,12 @@ Both the core packages, which act as foundations to this repo, are not complete 
 * Uniform random matrix
 
 ## How to use it?
-### How to use?
+### How to use and what supporitng packages are required?
 Note this is just a code repository and not a installer package. For the time being, please clone this repo, store all the files in a local directory and start using the software by simply typing,
 
 ``python Main.py``
+
+After this, a simple menu will be printed from and you will be prompted for a choice of number (a DOE) and name of the input CSV file (containing the names and ranges of your variables). **You can use the supplied generic CSV file as an example.**
 
 Before that, however, make sure you have all the necessary packages installed. You can simply run the .bash (Unix/Linux) and .bat (Windows) files provided in the repo, to install those packages from your command line interface. They contain the following commands,
 
