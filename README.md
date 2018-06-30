@@ -1,8 +1,12 @@
 # Design-of-experiment (DOE) matrix generator for engineering and statistics
-### Copyright Notice
-Copyright (c) <2018-2028, Dr. Tirthajyoti Sarkar, Sunnyvale, CA 94086> 
-
 <p align="center"><img width="400" height="350" src="https://www.tonex.com/wp-content/uploads/logo_DoE_RGB.jpg"></p>
+
+### Copyright Notice and Code repository
+***Copyright (c): 2018-2028, Dr. Tirthajyoti Sarkar, Sunnyvale, CA 94086*** 
+
+It uses a MIT License, so although I retain the copyright of this particular code, please feel free to exercise your rights of the free software by using and enhancing it.
+
+Please get the codebase from [here](https://github.com/tirthajyoti/Design-of-experiment-Python).
 
 ## Features
 This set of codes is a collection of functions which wrap around the core packages (mentioned below) and generate **design-of-experiment (DOE) matrices** for a statistician or engineer from an arbitrary range of input variables.
@@ -30,14 +34,8 @@ Both the core packages, which act as foundations to this repo, are not complete 
 * Uniform random matrix
 
 ## How to use it?
-### How to use and what supporitng packages are required?
-Note this is just a code repository and not a installer package. For the time being, please clone this repo, store all the files in a local directory and start using the software by simply typing,
-
-``python Main.py``
-
-After this, a simple menu will be printed on the screen and you will be prompted for a choice of number (a DOE) and name of the input CSV file (containing the names and ranges of your variables). **You should use the supplied generic CSV file as an example.** Please put the factors in the columns and the levels in the row (not the other way around).
-
-Before that, however, make sure you have all the necessary packages installed. You can simply run the .bash (Unix/Linux) and .bat (Windows) files provided in the repo, to install those packages from your command line interface. They contain the following commands,
+### What supporitng packages are required?
+First make sure you have all the necessary packages installed. You can simply run the .bash (Unix/Linux) and .bat (Windows) files provided in the repo, to install those packages from your command line interface. They contain the following commands,
 
 ```
 pip install numpy
@@ -46,6 +44,17 @@ pip install matplotlib
 pip install pydoe
 pip install diversipy
 ```
+### Eratta for using PyDOE
+Please note that as installed, PyDOE will throw some error related to type conversion. There are two options
+* I have modified the pyDOE code suitably and included a file with re-written functions in the repo. This is the file called by the program while executing, so you should see no error.
+* If you encounter any error, you could try to modify the PyDOE code by going to the folder where pyDOE files are copied and copying the two files `doe_factorial.py` and `doe_box_behnken.py` supplied with this repo.
+
+### How to use it?
+Note this is just a code repository and not a installer package. For the time being, please clone [this repo from GitHub](https://github.com/tirthajyoti/Design-of-experiment-Python), store all the files in a local directory and start using the software by simply typing,
+
+``python Main.py``
+
+After this, a simple menu will be printed on the screen and you will be prompted for a choice of number (a DOE) and name of the input CSV file (containing the names and ranges of your variables). **You should use the supplied generic CSV file as an example.** Please put the factors in the columns and the levels in the row (not the other way around).
 
 Also, **you must have an input parameters CSV file stored in the same directory** that you are running this code from. Couple of example CSV files are provided in the repo. Feel free to modify them as per your needs.
 
@@ -108,7 +117,7 @@ Pressure | Temperature | FlowRate | Time
 
 ### Central-composite design
 <p align="center"><img width="400" height="150" src="http://www.ece.northwestern.edu/local-apps/matlabhelp/toolbox/stats/doe_cc.gif"></p>
-A Box-Wilson Central Composite Design, commonly called 'a central composite design,' contains an imbedded factorial or fractional factorial design with center points that is augmented with a group of 'star points' that allow estimation of curvature. One central composite design consists of cube points at the corners of a unit cube that is the product of the intervals [-1,1], star points along the axes at or outside the cube, and center points at the origin. Central composite designs are of three types. Circumscribed (CCC) designs are as described above. Inscribed (CCI) designs are as described above, but scaled so the star points take the values -1 and +1, and the cube points lie in the interior of the cube. Faced (CCF) designs have the star points on the faces of the cube. Faced designs have three levels per factor, in contrast with the other types that have five levels per factor. The following figure shows these three types of designs for three factors. [Read this page] (https://www.itl.nist.gov/div898/handbook/pri/section3/pri3361.htm) for more information about this kind of design philosophy.
+A Box-Wilson Central Composite Design, commonly called 'a central composite design,' contains an imbedded factorial or fractional factorial design with center points that is augmented with a group of 'star points' that allow estimation of curvature. One central composite design consists of cube points at the corners of a unit cube that is the product of the intervals [-1,1], star points along the axes at or outside the cube, and center points at the origin. Central composite designs are of three types. Circumscribed (CCC) designs are as described above. Inscribed (CCI) designs are as described above, but scaled so the star points take the values -1 and +1, and the cube points lie in the interior of the cube. Faced (CCF) designs have the star points on the faces of the cube. Faced designs have three levels per factor, in contrast with the other types that have five levels per factor. The following figure shows these three types of designs for three factors. [Read this page] (http://blog.minitab.com/blog/understanding-statistics/getting-started-with-factorial-design-of-experiments-doe) for more information about this kind of design philosophy.
 
 ### Latin Hypercube design
 <p align="center"><img width="400" height="350" src="http://sumo.intec.ugent.be/sites/sumo/files//sed_3d.png"></p>
