@@ -2,6 +2,8 @@
 ### Copyright Notice
 Copyright (c) <2018-2028, Dr. Tirthajyoti Sarkar, Sunnyvale, CA 94086> 
 
+<p align="center"><img width="400" height="350" src="https://www.tonex.com/wp-content/uploads/logo_DoE_RGB.jpg"></p>
+
 ## Features
 This set of codes is a collection of functions which wrap around the core packages (mentioned below) and generate **design-of-experiment (DOE) matrices** for a statistician or engineer from an arbitrary range of input variables.
 
