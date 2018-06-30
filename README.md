@@ -105,16 +105,13 @@ Pressure | Temperature | FlowRate | Time
 70 | 350 | 0.4 | 11
 
 ### Central-composite design
-<p align="center">
-  <img width="500" height="250" src="http://www.ece.northwestern.edu/local-apps/matlabhelp/toolbox/stats/doe_cc.gif">
-</p>
-A Box-Wilson Central Composite Design, commonly called 'a central composite design,' contains an imbedded factorial or fractional factorial design with center points that is augmented with a group of 'star points' that allow estimation of curvature. One central composite design consists of cube points at the corners of a unit cube that is the product of the intervals [-1,1], star points along the axes at or outside the cube, and center points at the origin. Central composite designs are of three types. Circumscribed (CCC) designs are as described above. Inscribed (CCI) designs are as described above, but scaled so the star points take the values -1 and +1, and the cube points lie in the interior of the cube. Faced (CCF) designs have the star points on the faces of the cube. Faced designs have three levels per factor, in contrast with the other types that have five levels per factor. The following figure shows these three types of designs for three factors. 
-[Read this page](https://www.itl.nist.gov/div898/handbook/pri/section3/pri3361.htm) for more information about this kind of design philosophy.
+![image](http://www.ece.northwestern.edu/local-apps/matlabhelp/toolbox/stats/doe_cc.gif)
+
+A Box-Wilson Central Composite Design, commonly called 'a central composite design,' contains an imbedded factorial or fractional factorial design with center points that is augmented with a group of 'star points' that allow estimation of curvature. One central composite design consists of cube points at the corners of a unit cube that is the product of the intervals [-1,1], star points along the axes at or outside the cube, and center points at the origin. Central composite designs are of three types. Circumscribed (CCC) designs are as described above. Inscribed (CCI) designs are as described above, but scaled so the star points take the values -1 and +1, and the cube points lie in the interior of the cube. Faced (CCF) designs have the star points on the faces of the cube. Faced designs have three levels per factor, in contrast with the other types that have five levels per factor. The following figure shows these three types of designs for three factors. [Read this page] (https://www.itl.nist.gov/div898/handbook/pri/section3/pri3361.htm) for more information about this kind of design philosophy.
 
 ### Latin Hypercube design
-<p align="center">
-  <img width="400" height="350" src="http://sumo.intec.ugent.be/sites/sumo/files//sed_3d.png">
-</p>
+<p align="center"><img width="400" height="350" src="http://sumo.intec.ugent.be/sites/sumo/files//sed_3d.png"></p>
+
 Sometimes, a set of ***randomized design points within a given range*** could be attractive for the experimenter to asses the impact of the process variables on the output. [Monte Carlo simulations](https://en.wikipedia.org/wiki/Monte_Carlo_method) are close example of this approach. However, a Latin Hypercube design is better choice for experimental design rather than building a complete random matrix as it tries to subdivide the sample space in smaller cells and choose only one element out of each subcell. This way, a more ***'uniform spreading' of the random sample points*** can be obtained. User can choose the density of sample points. For example, if we choose to generate a Latin Hypercube of 12 experiments from the same input files, that could look like,
 
 Pressure | Temperature | FlowRate | Time
