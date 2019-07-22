@@ -8,6 +8,16 @@ It uses a MIT License, so although I retain the copyright of this particular cod
 
 Please get the codebase from [here](https://github.com/tirthajyoti/Design-of-experiment-Python).
 
+## UPDATE (July 2019)
+
+A formal PyPi-hosted package `doepy` has been released (Alpha 0.0.1 version). [Here is the Github repo](https://github.com/tirthajyoti/doepy).
+
+You can easy install the package by **`pip install doepy`** and use that for generating CSV files of design tables. 
+
+All the design schemes, mentioned in this repo, are supported in this package now.
+
+[READ the Docs here](https://doepy.readthedocs.io/en/latest/).
+
 ## Table of Contents
 1. [Introduction](#Introduction)
     * [What is a scientific experiment?](#ScienceExp)
