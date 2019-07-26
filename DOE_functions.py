@@ -1,4 +1,3 @@
-
 #====================
 # Essential imports
 #====================
@@ -110,8 +109,8 @@ def build_full_fact(factor_level_ranges):
     
     return df
 
-# ================================================================================================================================================================
-# Function for building 2-level fractional factorial DataFrame from a dictionary of process variables and a generator string representing the confounded variable
+# ==================================================================================================================================================
+# Function for building 2-level fractional factorial DataFrame from a dictionary and a generator string
 # ================================================================================================================================================================
 
 def build_frac_fact(factor_level_ranges,gen_string):
